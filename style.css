@@ -1,11 +1,183 @@
 /* Global Styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Work+Sans:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
 }
 
 html {
   font-size: 62.5%;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-family: 'Pattaya', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+/* Nav Section */
+.main-header {
+  background-color: #181b30;
+  color: white;
+  border-bottom: 0.3rem solid rgba(241, 196, 15, 1);
+}
+
+nav {
+  min-height: 10vh;
+  padding: 2rem;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+}
+
+nav ul li {
+  border-top: 0.1rem solid transparent;
+  padding-top: 1rem;
+  transition: all 500ms;
+}
+
+nav ul li:hover {
+  border-top: 0.1rem solid rgba(241, 196, 15, 1);
+}
+
+#logo {
+  flex: 2 1 40rem;
+}
+
+.hero {
+  min-height: 89.7vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url('/Images/hero-bg.jpg'); */
+
+  background: linear-gradient(rgba(52, 152, 219, 1), transparent),
+    url('/Images/hero-bg.jpg');
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-weight: 800;
+}
+
+.hero h3 {
+  font-weight: 400;
+  padding: 3rem;
+}
+
+.hero button {
+  background-color: rgba(255, 255, 255, 0.274);
+  border: 2px solid white;
+  padding: 1rem;
+  width: 30rem;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 2.5rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.63);
+  outline: none;
+  transition: all ease 400ms;
+}
+
+.hero button:hover {
+  transform: scale(1.04);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.63);
+}
+
+/* TABLET Version */
+@media screen and (max-width: 934px) {
+  nav {
+    text-align: center;
+  }
+
+  #logo {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  nav ul li:hover {
+    border-top: 0.1rem solid transparent;
+  }
+}
+/* Mobile Version */
+@media screen and (max-width: 500px) {
+  #logo {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .hero button {
+    width: 20rem;
+    font-size: 2rem;
+  }
+
+  nav ul li {
+    font-size: 1.8rem;
+  }
 }

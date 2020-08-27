@@ -1,1 +1,1 @@
-# HOWD 🤩 Journey 🏂🏼
+# Travelly Project 🏂🏼

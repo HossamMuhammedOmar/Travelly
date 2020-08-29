@@ -17,7 +17,6 @@ html {
 
 h2 {
   font-size: 2.6rem;
-  font-family: 'Pattaya', sans-serif;
   font-weight: bold;
 }
 
@@ -53,9 +52,8 @@ li {
 
 /* Nav Section */
 .main-header {
-  background-color: #181b30;
+  background-color: #1a252f;
   color: white;
-  border-bottom: 0.3rem solid rgba(241, 196, 15, 1);
 }
 
 nav {
@@ -81,20 +79,24 @@ nav ul li {
 }
 
 nav ul li:hover {
-  border-top: 0.1rem solid rgba(241, 196, 15, 1);
+  /* border-top: 0.1rem solid rgba(241, 196, 15, 1); */
+  border-top: 0.1rem solid white;
 }
 
 #logo {
   flex: 2 1 40rem;
+  font-family: 'Pattaya', sans-serif;
 }
 
-.hero {
-  min-height: 89.7vh;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url('/Images/hero-bg.jpg'); */
+/* Hero Section */
 
-  background: linear-gradient(rgba(52, 152, 219, 1), transparent),
-    url('/Images/hero-bg.jpg');
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url('/Images/pexels-sam-kolder-2387873.jpg');
+
+  /* background: linear-gradient(rgba(52, 152, 219, 1), transparent),
+    url('/Images/hero-bg.jpg'); */
 
   background-repeat: no-repeat;
   background-position: center;
@@ -113,7 +115,7 @@ nav ul li:hover {
 
 .hero h3 {
   font-weight: 400;
-  padding: 3rem;
+  padding: 4rem 0;
 }
 
 .hero button {
@@ -126,16 +128,43 @@ nav ul li:hover {
   cursor: pointer;
   font-weight: 800;
   font-size: 2.5rem;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.63);
+  /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.63); */
   outline: none;
   transition: all ease 400ms;
 }
 
 .hero button:hover {
-  transform: scale(1.04);
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.63);
+  /* background-color: white; */
+  transform: rotate(-3deg);
+  /* color: #4d4d4d; */
+  /* box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.63); */
 }
 
+/* Locations Section */
+
+.locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url('/Images/pexels-gratisography-2255.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  font-size: 4rem;
+  padding: 2rem 0;
+}
+
+/*********************** Media Query *************************/
 /* TABLET Version */
 @media screen and (max-width: 934px) {
   nav {
@@ -158,6 +187,7 @@ nav ul li:hover {
     border-top: 0.1rem solid transparent;
   }
 }
+
 /* Mobile Version */
 @media screen and (max-width: 500px) {
   #logo {

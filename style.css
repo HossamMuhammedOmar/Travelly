@@ -130,7 +130,7 @@ nav ul li:hover {
   font-size: 2.5rem;
   /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.63); */
   outline: none;
-  transition: all ease 400ms;
+  transition: all ease 300ms;
 }
 
 .hero button:hover {
@@ -144,7 +144,7 @@ nav ul li:hover {
 
 .locations {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), transparent),
     url('/Images/pexels-gratisography-2255.jpg');
   background-size: cover;
   background-position: center;
@@ -152,6 +152,8 @@ nav ul li:hover {
   color: black;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .locations-head {
@@ -162,6 +164,45 @@ nav ul li:hover {
 .locations-head h2 {
   font-size: 4rem;
   padding: 2rem 0;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.locations-head h3 {
+  padding: 4rem 0;
+  background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  width: 110rem;
+  position: absolute;
+  top: -25%;
+  right: -15%;
+  pointer-events: none;
+}
+
+.moving-cloud-1 {
+  z-index: 1;
+  animation: cloudAnimation 6s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+  top: 0%;
+  z-index: 0;
+  opacity: 0.3;
+  animation: cloudAnimation 4s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
 }
 
 /*********************** Media Query *************************/
@@ -177,6 +218,24 @@ nav ul li:hover {
 
   h1 {
     font-size: 4rem;
+  }
+
+  .locations-head h2 {
+    font-size: 4rem;
+    text-decoration-thickness: 0.2rem;
+    z-index: 1;
+  }
+
+  .cloud {
+    width: 90rem;
+  }
+
+  .moving-cloud-1 {
+    z-index: 0;
+  }
+
+  .moving-cloud-2 {
+    z-index: 0;
   }
 
   h3 {
@@ -198,6 +257,11 @@ nav ul li:hover {
     font-size: 3rem;
   }
 
+  .locations-head h2 {
+    font-size: 2.5rem;
+    text-decoration-thickness: 0.2rem;
+  }
+
   h3 {
     font-size: 2rem;
   }
@@ -209,5 +273,9 @@ nav ul li:hover {
 
   nav ul li {
     font-size: 1.8rem;
+  }
+
+  .cloud {
+    width: 50rem;
   }
 }

@@ -196,6 +196,72 @@ nav ul li:hover {
   animation: cloudAnimation 4s infinite alternate ease-in-out;
 }
 
+/* Benefits Section */
+
+.benefits {
+}
+
+.benefits-head {
+  background: #2c3e50;
+  color: white;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.benefits-head h2 {
+  font-size: 4rem;
+}
+
+.benefits-head h3 {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.cards {
+  min-height: 70vh;
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 25rem;
+  min-height: 30vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-icon {
+  background-color: #2c3e50;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card img {
+  max-width: 15%;
+  margin: 2rem;
+}
+
+.card h4 {
+  padding: 2rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.card p {
+  padding: 2rem 2rem 3rem 2rem;
+}
+
+/* Animations */
 @keyframes cloudAnimation {
   from {
     transform: translate(10%, -10%);
